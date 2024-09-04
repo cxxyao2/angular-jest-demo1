@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Test
 - npm run test
-
+- npm run test:watch
+- npm run test:coverage
 ## Setting
 
 - step1, Uninstall all karma jasmine packages
