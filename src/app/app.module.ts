@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatchersComponent } from './matchers/matchers.component';
 import { DataComponent } from './data/data.component';
+import { AsynchronousComponent } from './asynchronous/asynchronous.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MatchersComponent,
-    DataComponent
+    DataComponent,
+    AsynchronousComponent
   ],
   imports: [
     BrowserModule,
