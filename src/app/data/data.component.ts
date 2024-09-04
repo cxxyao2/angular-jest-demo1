@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class DataComponent implements OnInit {
 serviceData: any;
 errorMessage:any;
+greeting: any;
 
   constructor(private fakeService: FakeService) { }
 
@@ -20,6 +21,7 @@ errorMessage:any;
     this.fakeService.getDataV1().subscribe({
       next: data =>{
         this.serviceData = data;
+        this.setGreeting();
       },
       error: err =>{
         this.errorMessage = err.statusText;
@@ -30,6 +32,14 @@ errorMessage:any;
     });
   }
 
-
+  setGreeting(){
+    if(this.serviceData.time < 10) {
+      this.greeting = 'Good morning';
+    } else if ( this.serviceData.time < 20) {
+      this.greeting = 'Good day';
+    }   else {
+      this.greeting = 'Good evening';
+    }
+  }
 
 }

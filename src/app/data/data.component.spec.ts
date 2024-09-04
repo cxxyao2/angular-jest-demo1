@@ -54,4 +54,25 @@ describe('DataComponent', () => {
 
   });
 
+
+  it('should greeting set Good morning',() => {
+    const expRes = {
+      name: 'Jane',
+      time: 9
+    };
+    jest.spyOn(fakeServiceMock,'getDataV1').mockReturnValue(of(expRes));
+    fixture.detectChanges();
+    expect(component.greeting).toBe('Good morning');
+  });
+
+  it('should greeting set Good day',() => {
+    const expRes = {
+      name: 'Jane',
+      time: 12
+    };
+    jest.spyOn(fakeServiceMock,'getDataV1').mockReturnValue(of(expRes));
+    fixture.detectChanges();
+    expect(component.greeting).toBe('Good day');
+  });
+  
 });
