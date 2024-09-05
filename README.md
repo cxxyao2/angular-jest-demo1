@@ -20,3 +20,18 @@ npm uninstall @types/jasmine jasmine-core karma karma-chrome-launcher karma-cove
 - step7, add jest configuration in package.json
 - step8, add scripts in package.json to run jest
 
+## Run a specific test file
+- under the root folder (package.json is located)
+- npm run test fake.service.test.ts
+- npm run test /services/ 
+
+## Run a specific test case
+```
+it.only('should greeting',()=>{...})
+```
+
+## Skip a test case
+```
+it.skip()
+```
+

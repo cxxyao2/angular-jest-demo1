@@ -55,7 +55,7 @@ describe('DataComponent', () => {
   });
 
 
-  it('should greeting set Good morning',() => {
+  it.only('should greeting set Good morning',() => {
     const expRes = {
       name: 'Jane',
       time: 9
